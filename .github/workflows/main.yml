@@ -23,6 +23,7 @@ jobs:
         python -m pip install robotframework
         pip install --upgrade robotframework
         pip3 install --upgrade robotframework
+        pip install setuptools == 69.5.1
         
     - name: Run Robot Frameworks testes
       run:  |
