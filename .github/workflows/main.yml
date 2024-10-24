@@ -19,6 +19,10 @@ jobs:
         pip install robotframework
         pip install robotframework-requests
         pip install robotframework-faker
+        python3 -m pip install robotframework
+        python -m pip install robotframework
+        pip install --upgrade robotframework
+        pip3 install --upgrade robotframework
         
     - name: Run Robot Frameworks testes
       run:  |
