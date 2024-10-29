@@ -5,6 +5,14 @@ jobs:
     name: Run Testes
     runs-on: ubuntu-latest
 
+    permissions:
+     contents: read
+     pages: write
+     id-token: write
+    environment:
+      name: github-pages
+      url: https://cristiancfe.github.io/RobotFramework-Web/report.html
+
     steps:
     - name: checkout Repository 
       uses: actions/checkout@v2
@@ -34,3 +42,15 @@ jobs:
       with:
         name: CRUD-robot-results
         path: ./results
+      #Pages configuração  
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./formulario/
+
+    - name: Deploy to Github Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
