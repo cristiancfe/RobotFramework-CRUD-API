@@ -11,7 +11,7 @@ jobs:
      id-token: write
     environment:
       name: github-pages
-      url: https://cristiancfe.github.io/RobotFramework-Web/report.html
+      url: https://cristiancfe.github.io/RobotFramework-CRUD-API/report.html
 
     steps:
     - name: checkout Repository 
